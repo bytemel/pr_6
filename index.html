@@ -4,19 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timothy Mwangi - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="script.js">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            backdrop-filter: blur(0.001px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .profile-container {
+            flex: 1;
+            padding: 20px;
+            max-width: 30%; /* Adjust the size of the profile pic */
+        }
+
+        .profile-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-left: 20px; /* Add margin to separate from the profile pic */
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            padding: 15px 0;
+            text-align: center;
+            color: #1809e0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1809e0;
+            font-weight: bold;
+        }
+
+        .nav button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 2px solid #1809e0;
+            color: #1809e0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav button:hover {
+            background-color: #1809e0;
+            color: white;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1809e0;
+        }
+
+        .destination-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .destination {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .destination:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .destination h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #1809e0;
+            text-align: center;
+        }
+
+        .destination p {
+            text-align: justify;
+            line-height: 1.5;
+            padding: 10px;
+        }
+
+        .skills-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-container ul {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skills-container li {
+            margin: 15px;
+            padding: 15px;
+            background-color: #1809e0;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .skills-container li:hover {
+            transform: scale(1.05);
+        }
+
+        .skills-container span {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #59c9e6;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Timothy Mwangi's Portfolio</h1>
+        <div class="profile-container">
+            <img src="profile.jpeg" alt="Profile Picture">
+        </div>
+        <div class="intro">
+            <h1>Timothy Mwangi's Portfolio</h1>
+            <p>
+                Welcome to my portfolio where I showcase my skills, projects, and experiences. Feel free to explore and learn more about me.
+            </p>
+        </div>
         <nav>
-            <ul>
-                <li><a href="about.html" target="_blank"><button type="button">About</button></a></li>
-                <li><a href="skills.html" target="_blank"><button type="button">Skills</button></a></li>
-                <li><a href="projects.html" target="_blank"><button type="button">Projects</button></a></li>
-                <li><a href="blog.html" target="_blank"><button type="button">Blog</button></a></li>
-                <li><a href="contact.html" target="_blank"><button type="button">Contact</button></a></li>
+            <ul class="nav">
+                <li><a href="#about"><button type="button">About</button></a></li>
+                <li><a href="#skills"><button type="button">Skills</button></a></li>
+                <li><a href="#projects"><button type="button">Projects</button></a></li>
+                <li><a href="#blog"><button type="button">Blog</button></a></li>
+                <li><a href="#contact"><button type="button">Contact</button></a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +233,7 @@
         </section>
 
         <section class="destination-section">
-            <!-- Your project cards can go here, similar to the destination cards -->
+            
         </section>
 
         <section>
@@ -49,7 +252,7 @@
                         JavaScript
                         <span>Experienced in building interactive and dynamic web applications.</span>
                     </li>
-                    <!-- Add more skills as needed -->
+                    
                 </ul>
             </div>
         </section>
